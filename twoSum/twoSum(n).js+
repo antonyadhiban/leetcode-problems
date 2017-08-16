@@ -5,10 +5,9 @@ var twoSumHash = function(nums, target)  {
     hash[nums[i]] = i;
   }
   var hash_keys = Object.keys(hash);
-  console.log(hash_keys);
   Object.keys(hash).map(function(key, index){
     var complement = target - nums[index];
-    if( hash.hasOwnProperty(complement) ){
+    if( hash.hasOwnProperty(complement) && hash[complement] != index){
       result = [complement, nums[index]];
     }
   });
