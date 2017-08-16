@@ -8,7 +8,7 @@ var twoSumHash = function(nums, target)  {
   Object.keys(hash).map(function(key, index){
     var complement = target - nums[index];
     if( hash.hasOwnProperty(complement) && hash[complement] != index){
-      result = [complement, nums[index]];
+      result = [hash[complement], index];
     }
   });
   if(result){
